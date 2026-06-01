@@ -30,15 +30,15 @@ The dataset captures business transactions running from **January 1, 2023, to Ju
 
 The `Date` column was originally formatted as raw numbers. I converted and standardized this into a clean date format to enable accurate time-series analysis.
 
-### 3. Currency Standardization 
+### 2. Currency Standardization 
 
 Both `UnitPrice` and `TotalPrice` were stored as basic decimal numbers. These were formatted into standard currency ($) to align with business reporting.
 
-### 4. Data Profiling 
+### 3. Data Profiling 
 
 During profiling, I identified recurring `CustomerID` values. In a transactional dataset, this isn't a data entry error, it’s excellent news! It indicates customer retention and repeat purchases, which will be a key metric for future dashboarding.
 
-### 5. Context-Driven Imputation for Missing Data
+### 4. Context-Driven Imputation for Missing Data
 
 * Out of 1,200 rows, the `CouponCode` column contained **309 null values**. Instead of dropping these rows and losing ~25% of our operational data, I applied context-driven imputation. A missing coupon code simply means no coupon was applied. I replaced these nulls with the string `"NO COUPON"` to preserve data integrity and make the column ready for categorical analysis.
 
