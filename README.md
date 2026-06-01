@@ -40,11 +40,11 @@ During profiling, I identified recurring `CustomerID` values. In a transactional
 
 ### 4. Context-Driven Imputation for Missing Data
 
-* Out of 1,200 rows, the `CouponCode` column contained **309 null values**. Instead of dropping these rows and losing ~25% of our operational data, I applied context-driven imputation. A missing coupon code simply means no coupon was applied. I replaced these nulls with the string `"NO COUPON"` to preserve data integrity and make the column ready for categorical analysis.
+Out of 1,200 rows, the `CouponCode` column contained **309 null values**. Instead of dropping these rows and losing ~25% of our operational data, I applied context-driven imputation. A missing coupon code simply means no coupon was applied. I replaced these nulls with the string `"NO COUPON"` to preserve data integrity and make the column ready for categorical analysis.
 
 ---
 
 
-Data cleaning isn't just about fixing errors. It’s about understanding the story behind the rows and columns before you ever write a line of DAX or build a visual.
+Data cleaning isn't just about fixing errors. It’s about understanding the story behind the rows and columns.
 
 
